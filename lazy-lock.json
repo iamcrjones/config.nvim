@@ -17,6 +17,7 @@
   "mini.icons": { "branch": "main", "commit": "397ed3807e96b59709ef3292f0a3e253d5c1dc0a" },
   "mini.nvim": { "branch": "main", "commit": "35e1767f4cd7dde51256eabae7349a5283a43cba" },
   "neogit": { "branch": "master", "commit": "89a2df9a882868ddfa2a757e3224f57971e38329" },
+  "nvim-autopairs": { "branch": "master", "commit": "4d74e75913832866aa7de35e4202463ddf6efd1b" },
   "nvim-lspconfig": { "branch": "master", "commit": "036885e8e5456d3907626b634693234f628afef6" },
   "nvim-treesitter": { "branch": "master", "commit": "42fc28ba918343ebfd5565147a42a26580579482" },
   "nvim-web-devicons": { "branch": "master", "commit": "1fb58cca9aebbc4fd32b086cb413548ce132c127" },
