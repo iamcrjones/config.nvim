@@ -11,6 +11,7 @@ return {
       -- Configure 'transparent_background' to make your Neovim background
       -- transparent, inheriting from your terminal's background.
       vim.g.everforest_transparent_background = 1
+      vim.g.everforest_enable_undercurl = 1
 
       -- Optional: Set specific themes for different parts of Neovim.
       -- This can be useful for blending with other plugins.
