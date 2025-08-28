@@ -116,6 +116,8 @@ vim.keymap.set('n', '<leader>bd', ':bd<cr>', { desc = 'Delete Buffer' })
 vim.keymap.set('n', '<leader>bo', ':%bd|edit#|bd#<cr>', { desc = 'Delete Other Buffers' })
 vim.keymap.set('n', '<leader>gg', '<cmd>Neogit<cr>', { desc = 'Open Neogit' })
 vim.keymap.set('n', '<leader>gb', '<cmd>Gitsigns blame<cr>', { desc = 'View git blame of current buffer' })
+vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>', { desc = 'Open Lazy' })
+vim.keymap.set('n', '<leader>m', '<cmd>Mason<cr>', { desc = 'Open Mason' })
 
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
