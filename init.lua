@@ -289,7 +289,14 @@ require('lazy').setup({
     config = function()
       -- Fzf-lua setup is generally optional as it has great defaults
       -- But you can add your own config here if you wish
-      require('fzf-lua').setup {}
+      require('fzf-lua').setup {
+        file_ignore_patterns = {
+          'node_modules',
+          'dist',
+          '.next',
+          -- Add any other patterns you want to ignore here
+        },
+      }
 
       -- The `fzf-lua` functions are directly available from the main module
       local fzf_lua = require 'fzf-lua'
