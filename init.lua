@@ -119,12 +119,6 @@ vim.keymap.set('n', '<leader>gb', '<cmd>Gitsigns blame<cr>', { desc = 'View git 
 vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>', { desc = 'Open Lazy' })
 vim.keymap.set('n', '<leader>m', '<cmd>Mason<cr>', { desc = 'Open Mason' })
 
--- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
--- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
--- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
--- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
--- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
-
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
