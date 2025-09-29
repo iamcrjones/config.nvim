@@ -5,7 +5,7 @@ return {
     require('toggleterm').setup {
       -- Configuration options (optional)
       -- size = 20,
-      open_mapping = [[<c-_>]],
+      open_mapping = [[<C-Enter>]],
       direction = 'float',
       float_opts = {
         border = 'curved',
