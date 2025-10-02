@@ -116,8 +116,8 @@ vim.keymap.set('n', '<leader>bd', ':bd<cr>', { desc = 'Delete Buffer' })
 vim.keymap.set('n', '<leader>bo', ':%bd|edit#|bd#<cr>', { desc = 'Delete Other Buffers' })
 vim.keymap.set('n', '<leader>gg', '<cmd>Neogit<cr>', { desc = 'Open Neogit' })
 vim.keymap.set('n', '<leader>gb', '<cmd>Gitsigns blame<cr>', { desc = 'View git blame of current buffer' })
-vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>', { desc = 'Open Lazy' })
-vim.keymap.set('n', '<leader>m', '<cmd>Mason<cr>', { desc = 'Open Mason' })
+vim.keymap.set('n', '<leader>L', '<cmd>Lazy<cr>', { desc = 'Open Lazy' })
+vim.keymap.set('n', '<leader>M', '<cmd>Mason<cr>', { desc = 'Open Mason' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -710,7 +710,7 @@ require('lazy').setup({
         -- <c-k>: Toggle signature help
         --
         -- See :h blink-cmp-config-keymap for defining your own keymap
-        preset = 'default',
+        preset = 'super-tab',
 
         -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
         --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
