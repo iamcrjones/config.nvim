@@ -284,11 +284,25 @@ require('lazy').setup({
       -- Fzf-lua setup is generally optional as it has great defaults
       -- But you can add your own config here if you wish
       require('fzf-lua').setup {
+        find_opts = [[-type f \! -path '*/.git/*' \! -name '.env']], -- Find requires a different fix
+        rg_opts = [[--color=never --hidden --files --no-ignore -g "!.git"]], -- ADD --no-ignore
+        fd_opts = [[--color=never --hidden --type f --type l -I --exclude .git]], -- ADD -I
         file_ignore_patterns = {
-          'node_modules',
-          'dist',
+          'node_modules/',
+          'dist/',
           '.next',
+          'vendor/',
           -- Add any other patterns you want to ignore here
+        },
+        grep = {
+          hidden = true,
+          follow = false,
+          no_ignore = true,
+        },
+        files = {
+          hidden = true,
+          follow = false,
+          no_ignore = true,
         },
       }
 
@@ -305,7 +319,7 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sd', fzf_lua.diagnostics_document, { desc = '[S]earch [D]iagnostics' })
       vim.keymap.set('n', '<leader>sr', fzf_lua.resume, { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<leader>s.', fzf_lua.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
-      vim.keymap.set('n', '<leader><leader>', fzf_lua.buffers, { desc = '[ ] Find existing buffers' })
+      vim.keymap.set('n', '<leader>sb', fzf_lua.buffers, { desc = '[S]earch existing buffers' })
 
       -- Fuzzily search in current buffer
       vim.keymap.set('n', '<leader>/', function()
@@ -710,7 +724,7 @@ require('lazy').setup({
         -- <c-k>: Toggle signature help
         --
         -- See :h blink-cmp-config-keymap for defining your own keymap
-        preset = 'super-tab',
+        preset = 'enter',
 
         -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
         --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
