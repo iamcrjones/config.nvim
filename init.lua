@@ -674,7 +674,7 @@ require('lazy').setup({
         javascriptreact = { 'prettier', stop_after_first = true },
         typescript = { 'prettier', stop_after_first = true },
         typescriptreact = { 'prettier', stop_after_first = true },
-        php = { 'pint' },
+        php = { 'phpcbf', 'php-cs-fixer', 'pint' },
       },
     },
   },
