@@ -298,11 +298,13 @@ require('lazy').setup({
           hidden = true,
           follow = false,
           no_ignore = true,
+          fzf_opts = { ['--exact'] = true },
         },
         files = {
           hidden = true,
           follow = false,
           no_ignore = true,
+          fzf_opts = { ['--exact'] = true },
         },
       }
 
@@ -674,7 +676,7 @@ require('lazy').setup({
         javascriptreact = { 'prettier', stop_after_first = true },
         typescript = { 'prettier', stop_after_first = true },
         typescriptreact = { 'prettier', stop_after_first = true },
-        php = { 'phpcbf', 'php-cs-fixer', 'pint' },
+        php = { 'php-cs-fixer', 'phpcbf', 'pint', stop_after_first = true },
       },
     },
   },
