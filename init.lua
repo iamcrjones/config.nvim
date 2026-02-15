@@ -661,7 +661,7 @@ require('lazy').setup({
           return nil
         else
           return {
-            timeout_ms = 500,
+            timeout_ms = 2000,
             lsp_format = 'fallback',
           }
         end
@@ -676,7 +676,10 @@ require('lazy').setup({
         javascriptreact = { 'prettier', stop_after_first = true },
         typescript = { 'prettier', stop_after_first = true },
         typescriptreact = { 'prettier', stop_after_first = true },
-        php = { 'php-cs-fixer', 'phpcbf', 'pint', stop_after_first = true },
+        php = { 'phpcbf', 'pint', stop_after_first = true },
+      },
+      format_after_save = {
+        lsp_format = 'fallback',
       },
     },
   },
@@ -873,7 +876,7 @@ require('lazy').setup({
   --
   -- require 'kickstart.plugins.debug',
   require 'kickstart.plugins.indent_line',
-  -- require 'kickstart.plugins.lint',
+  require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
