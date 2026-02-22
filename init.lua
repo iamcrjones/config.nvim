@@ -611,11 +611,10 @@ require('lazy').setup({
         'stylua', -- Used to format Lua code
         'phpcbf',
         'phpcs',
-        'php-cs-fixer',
         'eslint_d',
-        'pint',
         'shfmt',
         'prettierd',
+        'intelephense',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
