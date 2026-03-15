@@ -80,6 +80,21 @@ return {
         ['gx'] = 'actions.open_external',
         ['g.'] = { 'actions.toggle_hidden', mode = 'n' },
         ['g\\'] = { 'actions.toggle_trash', mode = 'n' },
+        ['gy'] = { 'actions.yank_entry', mode = 'n' },
+        ['gY'] = {
+          callback = function()
+            local entry = require('oil').get_cursor_entry()
+            local dir = require('oil').get_current_dir()
+            if not entry or not dir then
+              return
+            end
+            local path = dir .. entry.name
+            vim.fn.setreg('+', path) -- Yank to system clipboard
+            print('Yanked path: ' .. path)
+          end,
+          desc = 'Yank absolute path',
+          mode = 'n',
+        },
       },
       -- Set to false to disable all of the above keymaps
       use_default_keymaps = true,
